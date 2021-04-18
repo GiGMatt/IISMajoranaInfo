@@ -13,14 +13,81 @@
     
     <script type="text/javascript" src="script/script.js"></script>
 
+    <!-- Intestazione -->
+    <div class="header">
+        <h1>Tutte le informazioni che ti servono</h1>
+        <p>Nel modo più <b>semplice</b> possibile.</p>
+      </div>
+
+    <!-- Top menu -->
     <div class="topnav" id="myTopnav">
-    <a href="#home" class="active">Home</a>
-    <a href="#news">Circolari e Avvisi</a>
-    <a href="#time">Orario delle lezioni</a>
-    <a target="_blank" href="https://www.paypal.me/mattiameligeni">Offrimi un caffè</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
+
+        <!-- Link centrali -->
+        <div class="topnav-centered">
+        <a href="#home" class="active">Home</a>
+        </div>
+    
+        <!-- Link a sinistra -->
+        <a href="html's/news.html">Circolari e Avvisi</a>
+        <a href="html's/covid.html">COVID-19</a>
+    
+        <!-- Link a destra -->
+        <div class="topnav-right">
+        <a target="_blank" href="https://www.paypal.me/mattiameligeni">Offrimi un caffè</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div>
     </div>
+
+    <!-- Griglia dei contenuti -->
+    <div class="row">
+      <div class="column side" style="background-color:#aaa;">
+      </div>
+      <div class="column middle" style="background-color:#bbb;">
+          <p style="text-align: center;">Orari per classe:</p>
+          <table border="0">
+            <tr>
+              <p>Informatica: </p>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <p>Elettronica: </p>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <p>Meccanica: </p>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <p>Biotecnologie: </p>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+          </table>
+      </div>
+      <div class="column side" style="background-color:#ccc;">Column</div>
+    </div>
+  
+  <!-- Footer -->
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+
 </body>
 </html>

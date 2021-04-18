@@ -1,57 +1,189 @@
-/* Sfondo al menu */
+/* body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Intestazione */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Colore di sfondo del menu */
 .topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Stile dei bottoni */
-  .topnav a {
-    float: left;
+  position: relative;
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Stile dei bottoni */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Colori bottoni on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Colore per la pagina attiva */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Sezione centrale del menu */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Sezione destra del menu */
+.topnav-right {
+  float: right;
+}
+
+/* Contenitore della griglia */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.column {
+  padding: 10px;
+  height: 600px; 
+}
+
+/* Colonna laterale */
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* Colonna principale */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 4;
+}
+/* The container must be positioned relative: */
+.indirizzi {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
     display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* colore on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* colore pagina attiva */
-  .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  /* nascondi bottone apri sugli schermi piccoli */
-  .topnav .icon {
-    display: none;
   }
 
-  /* Responsive */
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
-  
-  /* Responsive */
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
